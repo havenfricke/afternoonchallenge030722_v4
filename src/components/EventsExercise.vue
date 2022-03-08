@@ -40,7 +40,7 @@ export default {
   name: "events-exercise",
   setup() {
     const state = reactive({
-      //add property called "counter"
+      
       //add property called "greeting"
       //create a method called "greet"
     });

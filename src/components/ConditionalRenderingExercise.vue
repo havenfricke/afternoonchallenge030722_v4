@@ -10,7 +10,7 @@
             screen.
           </p>
           <!-- add code to element below -->
-          <div class="player-card text-center">
+          <div class="state.player-card" v-if="state.showPlayer">
             <div>
               <img :src="state.player.photo" />
             </div>
@@ -68,7 +68,7 @@
           </p>
           <!-- v-if comparing grade and 90 -->
           <div>
-            <p>The grade is 'A'.</p>
+            <p v-if="num === 90">The grade is 'A'.</p>
           </div>
           <!-- v-else-if comparing grade and 80 -->
           <div>
@@ -128,8 +128,7 @@ export default {
   name: "condtional-rendering-exercise",
   setup() {
     const state = reactive({
-      //add a property to toggle the player-card here.
-      //add a property to set the number value here.
+      showPlayer: true,
       player: {
         photo: "https://robohash.org/D$",
         name: "D$",
